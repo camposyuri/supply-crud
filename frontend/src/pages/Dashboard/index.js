@@ -58,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   drawerPaper: {
-    position: "relative",
     whiteSpace: "nowrap",
     width: drawerWidth,
     transition: theme.transitions.create("width", {
@@ -150,8 +149,6 @@ const Dashboard = () => {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <Divider />
-        <SimpleList />
         <Divider />
         <SimpleList />
       </Drawer>

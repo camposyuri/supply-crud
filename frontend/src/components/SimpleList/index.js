@@ -10,6 +10,12 @@ const SimpleList = () => {
           <ListItemIcon>
             <StoreIcon />
           </ListItemIcon>
+          <ListItemText primary="Usuário" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <StoreIcon />
+          </ListItemIcon>
           <ListItemText primary="Lojas" />
         </ListItem>
         <ListItem button>
@@ -34,7 +40,7 @@ const SimpleList = () => {
           <ListItemIcon>
             <StoreIcon />
           </ListItemIcon>
-          <ListItemText primary="Gerenciamento Suplay" />
+          <ListItemText primary="Geren Suplay" />
         </ListItem>
       </List>
     </>

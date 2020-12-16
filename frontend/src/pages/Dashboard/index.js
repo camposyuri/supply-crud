@@ -10,9 +10,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Badge,
+  Container,
   Divider,
   Drawer,
+  Grid,
   IconButton,
+  Paper,
   Toolbar,
   Typography,
 } from "@material-ui/core";
@@ -92,6 +95,9 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
     flexDirection: "column",
   },
+  fixedHeight: {
+    height: 240,
+  },
 }));
 
 const Dashboard = () => {
@@ -101,9 +107,10 @@ const Dashboard = () => {
   const toggle = () => {
     setOpen(!open);
   };
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <>
+    <div className={classes.root}>
       <CssBaseline />
       <AppBar
         position="absolute"
@@ -152,7 +159,19 @@ const Dashboard = () => {
         <Divider />
         <SimpleList />
       </Drawer>
-    </>
+      <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Container maxWidth="lg" className={classes.container}>
+          <Grid container spacing={6}>
+            <Grid item xs={12} md={8}>
+              <Paper className={fixedHeightPaper}>
+                <h1>Hello World</h1>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container>
+      </main>
+    </div>
   );
 };
 

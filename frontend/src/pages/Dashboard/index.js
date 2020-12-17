@@ -19,6 +19,7 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
+import Users from "../Users";
 
 const drawerWidth = 240;
 
@@ -61,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   drawerPaper: {
+    position: "relative",
     whiteSpace: "nowrap",
     width: drawerWidth,
     transition: theme.transitions.create("width", {
@@ -96,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   fixedHeight: {
-    height: 240,
+    height: "100vh",
   },
 }));
 
@@ -161,11 +163,11 @@ const Dashboard = () => {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={6}>
-            <Grid item xs={12} md={8}>
+        <Container maxWidth="xl" className={classes.container}>
+          <Grid container spacing={3}>
+            <Grid item md={12}>
               <Paper className={fixedHeightPaper}>
-                <h1>Hello World</h1>
+                <Users />
               </Paper>
             </Grid>
           </Grid>
